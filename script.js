@@ -490,14 +490,14 @@ Native Spanish, native Valencian, and professional B2 English (1 year Dublin imm
             es: `<b>INFORMACIÓN DE CONTACTO & SOCIALES</b>
 ----------------------------------------------------------------------------
   • <b>Email:</b>     ramon.moncholi08@gmail.com
-  • <b>Ubicación:</b> Denia, Alicante, España
   • <b>LinkedIn:</b>  linkedin.com/in/ramonmonros
+  • <b>Ubicación:</b> Denia, Alicante, España
   • <b>GitHub:</b>    github.com/doliax`,
             en: `<b>PROFESSIONAL CONTACT COORDINATES</b>
 ----------------------------------------------------------------------------
   • <b>Email:</b>     ramon.moncholi08@gmail.com
-  • <b>Location:</b>  Denia, Alicante, Spain
   • <b>LinkedIn:</b>  linkedin.com/in/ramonmonros
+  • <b>Location:</b>  Denia, Alicante, Spain
   • <b>GitHub:</b>    github.com/doliax`
         }
     };
