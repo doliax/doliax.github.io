@@ -33,8 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const skillsTabBtns = document.querySelectorAll(".tab-btn");
     const skillCards = document.querySelectorAll(".skill-card");
     const glassCards = document.querySelectorAll(".glass");
-    const contactForm = document.getElementById("contact-form");
-    const formStatus = document.getElementById("form-status");
+
 
     /* ==========================================================================
        LANGUAGE SWITCHER (Bilingual Support)
@@ -357,48 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ==========================================================================
-       CONTACT FORM VALIDATION & SUBMISSION
-       ========================================================================== */
-    if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            
-            const submitBtn = contactForm.querySelector("#form-submit-btn");
-            const originalBtnContent = submitBtn.innerHTML;
-            
-            // Show loading state
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = state.lang === "es" 
-                ? `<i data-lucide="loader" class="animate-spin"></i> Enviando...` 
-                : `<i data-lucide="loader" class="animate-spin"></i> Sending...`;
-            
-            if (typeof lucide !== 'undefined') lucide.createIcons();
 
-            // Simulate server request
-            setTimeout(() => {
-                formStatus.style.display = "block";
-                formStatus.className = "success";
-                
-                if (state.lang === "es") {
-                    formStatus.textContent = "¡Mensaje enviado con éxito! Me pondré en contacto contigo muy pronto.";
-                } else {
-                    formStatus.textContent = "Message sent successfully! I will get in touch with you very soon.";
-                }
-                
-                // Clear form inputs
-                contactForm.reset();
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalBtnContent;
-                if (typeof lucide !== 'undefined') lucide.createIcons();
-
-                // Auto hide status after 5s
-                setTimeout(() => {
-                    formStatus.style.display = "none";
-                }, 5000);
-            }, 1500);
-        });
-    }
 });
 
 /* ==========================================================================
@@ -535,18 +493,14 @@ Native Spanish, native Valencian, and professional B2 English (1 year Dublin imm
   • <b>Teléfono:</b>  +34 634 692 908
   • <b>Ubicación:</b> Denia, Alicante, España
   • <b>LinkedIn:</b>  linkedin.com/in/ramonmonros
-  • <b>GitHub:</b>    github.com/doliax
-  
-<i>* Si quieres enviarme un mensaje directo, puedes usar el formulario al final de la página.</i>`,
+  • <b>GitHub:</b>    github.com/doliax`,
             en: `<b>PROFESSIONAL CONTACT COORDINATES</b>
 ----------------------------------------------------------------------------
   • <b>Email:</b>     ramon.moncholi08@gmail.com
   • <b>Phone:</b>     +34 634 692 908
   • <b>Location:</b>  Denia, Alicante, Spain
   • <b>LinkedIn:</b>  linkedin.com/in/ramonmonros
-  • <b>GitHub:</b>    github.com/doliax
-  
-<i>* To send me a direct email inquiry, utilize the contact form at the bottom of the page.</i>`
+  • <b>GitHub:</b>    github.com/doliax`
         }
     };
 
