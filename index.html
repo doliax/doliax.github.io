@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramón Moncholí Ros | Full Stack Developer & Cybersecurity</title>
+    <meta name="description" content="Portafolio profesional de Ramón Moncholí Ros, Desarrollador Full Stack (Python, Angular, Odoo) y Especialista en Ciberseguridad.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="lang-es dark-theme">
+    <!-- Partículas de fondo canvas -->
+    <canvas id="bg-particles"></canvas>
+
+    <!-- Header / Navigation -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#hero" class="logo" id="header-logo">
+                <span class="logo-accent">&lt;</span>RMR<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav id="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#about" class="nav-link"><span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span></a></li>
+                    <li><a href="#skills" class="nav-link"><span class="lang-es">Habilidades</span><span class="lang-en">Skills</span></a></li>
+                    <li><a href="#experience" class="nav-link"><span class="lang-es">Experiencia</span><span class="lang-en">Experience</span></a></li>
+                    <li><a href="#cybersecurity" class="nav-link"><span class="lang-es">Terminal CLI</span><span class="lang-en">CLI Terminal</span></a></li>
+                    <li><a href="#projects" class="nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a></li>
+                    <li><a href="#contact" class="nav-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-controls">
+                <!-- Selector de Idioma -->
+                <button id="lang-toggle" class="control-btn" title="Cambiar idioma / Switch language" aria-label="Cambiar idioma">
+                    <span class="lang-es">EN</span><span class="lang-en">ES</span>
+                </button>
+                <!-- Alternador de Tema -->
+                <button id="theme-toggle" class="control-btn" title="Cambiar tema / Toggle theme" aria-label="Cambiar tema">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <!-- Menú Móvil Hamburguesa -->
+                <button id="mobile-menu-btn" class="control-btn" aria-label="Abrir menú" aria-expanded="false">
+                    <i data-lucide="menu" class="menu-icon"></i>
+                    <i data-lucide="x" class="close-icon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-nav-menu" class="mobile-nav">
+        <ul>
+            <li><a href="#about" class="mobile-nav-link"><span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span></a></li>
+            <li><a href="#skills" class="mobile-nav-link"><span class="lang-es">Habilidades</span><span class="lang-en">Skills</span></a></li>
+            <li><a href="#experience" class="mobile-nav-link"><span class="lang-es">Experiencia</span><span class="lang-en">Experience</span></a></li>
+            <li><a href="#cybersecurity" class="mobile-nav-link"><span class="lang-es">Terminal CLI</span><span class="lang-en">CLI Terminal</span></a></li>
+            <li><a href="#projects" class="mobile-nav-link"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a></li>
+            <li><a href="#contact" class="mobile-nav-link"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-container">
+                <div class="hero-badge">
+                    <span class="badge-icon"><i data-lucide="terminal"></i></span>
+                    <span class="lang-es">Disponible para Nuevos Retos</span>
+                    <span class="lang-en">Available for New Challenges</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-welcome"><span class="lang-es">Hola, mi nombre es</span><span class="lang-en">Hi, my name is</span></span>
+                    <span class="hero-name">Ramón Moncholí Ros</span>
+                </h1>
+                
+                <h2 class="hero-subtitle">
+                    <span class="lang-es">Soy</span><span class="lang-en">I am a</span>
+                    <span id="typing-text" class="typing-accent"></span><span class="cursor">|</span>
+                </h2>
+
+                <p class="hero-desc">
+                    <span class="lang-es">Desarrollador Software Full Stack con doble titulación en DAM y DAW, especializado en Odoo ERP, Python, frontend moderno con Angular y fundamentos avanzados de Ciberseguridad.</span>
+                    <span class="lang-en">Full Stack Software Developer with dual higher degrees in DAM and DAW, specialized in Odoo ERP, Python, modern frontend with Angular, and advanced fundamentals of Cybersecurity.</span>
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" id="hero-view-work">
+                        <span class="lang-es">Ver Portafolio</span><span class="lang-en">View Work</span>
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary" id="hero-contact-me">
+                        <span class="lang-es">Contactar</span><span class="lang-en">Get in Touch</span>
+                    </a>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://linkedin.com/in/ramonmonros" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i data-lucide="linkedin"></i></a>
+                    <a href="https://github.com/doliax" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i data-lucide="github"></i></a>
+                    <a href="mailto:ramon.moncholi08@gmail.com" aria-label="Send Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll down">
+                    <span class="mouse-icon"><span class="wheel"></span></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="lang-es">Sobre Mí</span><span class="lang-en">About Me</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Bio & Soft Skills -->
+                    <div class="about-info card glass">
+                        <div class="card-glow"></div>
+                        <h3 class="card-title">
+                            <span class="lang-es">Perfil Profesional</span><span class="lang-en">Professional Profile</span>
+                        </h3>
+                        <p class="lang-es">
+                            Apasionado de la tecnología y el desarrollo de software seguro. Cuento con una sólida base técnica gracias a mi doble formación en desarrollo web (DAW) y multiplataforma (DAM). 
+                        </p>
+                        <p class="lang-es">
+                            Mi experiencia abarca la creación de módulos a medida para el ERP Odoo, optimizando procesos de bases de datos PostgreSQL con scripts en Python y reduciendo significativamente los tiempos de carga en un 20%. También poseo experiencia en el desarrollo de aplicaciones web responsivas e híbridas con Angular, Ionic y TypeScript, e integración de APIs REST.
+                        </p>
+                        <p class="lang-es">
+                            Además, he complementado mi perfil especializándome en Ciberseguridad (análisis de tráfico de red, auditoría y seguridad web) y en Inteligencia Artificial Generativa. Mi estancia de inmersión lingüística en Irlanda demuestra mi alta adaptabilidad y mi nivel B2 de inglés profesional.
+                        </p>
+                        
+                        <p class="lang-en">
+                            Passionate about technology and secure software development. I hold a solid technical foundation thanks to my dual higher degrees in web development (DAW) and multiplatform application development (DAM).
+                        </p>
+                        <p class="lang-en">
+                            My experience includes developing custom modules for the Odoo ERP system, optimizing PostgreSQL database operations with Python scripts, and successfully reducing process loading times by 20%. I am also skilled in building modern, responsive frontend and hybrid mobile applications using Angular, Ionic, and TypeScript, and integrating robust REST APIs.
+                        </p>
+                        <p class="lang-en">
+                            Additionally, I have specialized in Cybersecurity (network analysis, basic auditing, and web penetration testing) and Generative AI. My language immersion stay in Dublin, Ireland, demonstrates my high adaptability, multicultural coordination, and professional B2 English proficiency.
+                        </p>
+
+                        <div class="about-meta">
+                            <div class="meta-item">
+                                <span class="meta-label"><span class="lang-es">Ubicación:</span><span class="lang-en">Location:</span></span>
+                                <span class="meta-val">Denia, Alicante, <span class="lang-es">España</span><span class="lang-en">Spain</span></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Email:</span>
+                                <span class="meta-val"><a href="mailto:ramon.moncholi08@gmail.com">ramon.moncholi08@gmail.com</a></span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label"><span class="lang-es">Idiomas:</span><span class="lang-en">Languages:</span></span>
+                                <span class="meta-val">
+                                    <span class="lang-es">Español (Nativo), Valenciano (Nativo), Inglés (B2)</span>
+                                    <span class="lang-en">Spanish (Native), Valencian (Native), English (B2)</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="cv-downloads">
+                            <a href="docs/ramon_cv.pdf" class="btn btn-secondary btn-sm" download id="download-cv-es">
+                                <i data-lucide="download"></i>
+                                <span class="lang-es">Descargar CV (Español)</span><span class="lang-en">Download Resume (Spanish)</span>
+                            </a>
+                            <a href="docs/ramon_cv_english.pdf" class="btn btn-secondary btn-sm" download id="download-cv-en">
+                                <i data-lucide="download"></i>
+                                <span class="lang-es">Descargar CV (Inglés)</span><span class="lang-en">Download Resume (English)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills & Quick Cards -->
+                    <div class="about-sidebar">
+                        <div class="card glass soft-skills-card">
+                            <div class="card-glow"></div>
+                            <h3 class="card-title">
+                                <span class="lang-es">Habilidades Blandas</span><span class="lang-en">Soft Skills</span>
+                            </h3>
+                            <div class="soft-skills-grid">
+                                <div class="soft-skill-badge">
+                                    <i data-lucide="rocket"></i>
+                                    <span class="lang-es">Proactividad</span><span class="lang-en">Proactivity</span>
+                                </div>
+                                <div class="soft-skill-badge">
+                                    <i data-lucide="users"></i>
+                                    <span class="lang-es">Trabajo en Equipo</span><span class="lang-en">Teamwork</span>
+                                </div>
+                                <div class="soft-skill-badge">
+                                    <i data-lucide="brain"></i>
+                                    <span class="lang-es">Resolución de Problemas</span><span class="lang-en">Problem Solving</span>
+                                </div>
+                                <div class="soft-skill-badge">
+                                    <i data-lucide="shuffle"></i>
+                                    <span class="lang-es">Adaptabilidad</span><span class="lang-en">Adaptability</span>
+                                </div>
+                                <div class="soft-skill-badge">
+                                    <i data-lucide="message-square-code"></i>
+                                    <span class="lang-es">Comunicación Efectiva</span><span class="lang-en">Effective Comm.</span>
+                                </div>
+                                <div class="soft-skill-badge">
+                                    <i data-lucide="globe"></i>
+                                    <span class="lang-es">Coordinación Multicultural</span><span class="lang-en">Multicultural Coord.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Summary Quick cards -->
+                        <div class="card glass education-quick">
+                            <div class="card-glow"></div>
+                            <h3 class="card-title">
+                                <span class="lang-es">Educación</span><span class="lang-en">Education</span>
+                            </h3>
+                            <div class="edu-item">
+                                <span class="edu-year">2023</span>
+                                <div class="edu-content">
+                                    <h4><span class="lang-es">Especialización en Ciberseguridad</span><span class="lang-en">Specialization in Cybersecurity</span></h4>
+                                    <p>I.E.S Sant Vicent Ferrer (Algemesí)</p>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <span class="edu-year">2021</span>
+                                <div class="edu-content">
+                                    <h4><span class="lang-es">Técnico Superior en Desarrollo Web (DAW)</span><span class="lang-en">Higher Degree in Web Dev (DAW)</span></h4>
+                                    <p>Progresa Centro de Formación</p>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <span class="edu-year">2019</span>
+                                <div class="edu-content">
+                                    <h4><span class="lang-es">Técnico Superior en Aplicaciones Multiplataforma (DAM)</span><span class="lang-en">Higher Degree in Multiplatform Apps (DAM)</span></h4>
+                                    <p>Progresa Centro de Formación</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section-padding section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="lang-es">Habilidades Técnicas</span><span class="lang-en">Technical Skills</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="skills-tabs-container">
+                    <div class="skills-tabs" role="tablist">
+                        <button class="tab-btn active" role="tab" aria-selected="true" data-tab="all" id="tab-all">
+                            <span class="lang-es">Todas</span><span class="lang-en">All</span>
+                        </button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-tab="languages" id="tab-languages">
+                            <span class="lang-es">Lenguajes</span><span class="lang-en">Languages</span>
+                        </button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-tab="frontend" id="tab-frontend">
+                            Frontend
+                        </button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-tab="backend" id="tab-backend">
+                            Backend & ERP
+                        </button>
+                        <button class="tab-btn" role="tab" aria-selected="false" data-tab="cyber" id="tab-cyber">
+                            <span class="lang-es">Ciberseguridad & IA</span><span class="lang-en">Cybersecurity & AI</span>
+                        </button>
+                    </div>
+
+                    <div class="skills-grid" id="skills-display">
+                        <!-- Languages -->
+                        <div class="skill-card card glass" data-category="languages">
+                            <i data-lucide="code-2" class="skill-icon language-icon"></i>
+                            <h3>Python</h3>
+                            <p class="lang-es">Desarrollo de scripts, optimización de bases de datos, APIs de automatización y backend con Odoo.</p>
+                            <p class="lang-en">Scripting development, database optimization, backend automation APIs, and Odoo ERP modules.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="languages">
+                            <i data-lucide="coffee" class="skill-icon language-icon"></i>
+                            <h3>Java</h3>
+                            <p class="lang-es">Programación orientada a objetos de nivel empresarial, algoritmos, y desarrollo de aplicaciones de escritorio.</p>
+                            <p class="lang-en">Enterprise-level object-oriented programming, algorithms, and multiplatform desktop applications.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="languages">
+                            <i data-lucide="braces" class="skill-icon language-icon"></i>
+                            <h3>TypeScript / JavaScript</h3>
+                            <p class="lang-es">Desarrollo moderno para SPA, control de tipado, promesas, asincronía y APIs de frontend.</p>
+                            <p class="lang-en">Modern SPA development, strong typing, promises, async operations, and client-side interfaces.</p>
+                        </div>
+
+                        <!-- Frontend -->
+                        <div class="skill-card card glass" data-category="frontend">
+                            <i data-lucide="layers" class="skill-icon frontend-icon"></i>
+                            <h3>Angular</h3>
+                            <p class="lang-es">Creación de componentes interactivos, servicios, directivas, inyección de dependencias y SPA de alta escala.</p>
+                            <p class="lang-en">Component-driven architecture, services, directives, dependency injection, and scalable web apps.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="frontend">
+                            <i data-lucide="smartphone" class="skill-icon frontend-icon"></i>
+                            <h3>Ionic</h3>
+                            <p class="lang-es">Desarrollo de aplicaciones híbridas multiplataforma para móviles y web partiendo de código único.</p>
+                            <p class="lang-en">Cross-platform hybrid mobile and web application development from a single codebase.</p>
+                        </div>
+
+                        <!-- Backend & ERP -->
+                        <div class="skill-card card glass" data-category="backend">
+                            <i data-lucide="database" class="skill-icon backend-icon"></i>
+                            <h3>Odoo ERP</h3>
+                            <p class="lang-es">Desarrollo de módulos a medida, vistas XML, lógica de negocio ORM en Python y personalización de flujos de trabajo.</p>
+                            <p class="lang-en">Custom module development, XML view engineering, ORM Python business logic, and workflow tailoring.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="backend">
+                            <i data-lucide="link" class="skill-icon backend-icon"></i>
+                            <h3>REST APIs</h3>
+                            <p class="lang-es">Diseño e integración de servicios web robustos, serialización de datos JSON y comunicación segura cliente-servidor.</p>
+                            <p class="lang-en">Robust design and integration of web services, JSON serialization, and secure client-server communication.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="backend">
+                            <i data-lucide="database-backup" class="skill-icon backend-icon"></i>
+                            <h3>PostgreSQL / MySQL</h3>
+                            <p class="lang-es">Diseño de bases de datos relacionales, optimización de consultas SQL complejas, índices y migraciones eficientes.</p>
+                            <p class="lang-en">Relational database design, query optimization, indexing, and high-performance migrations.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="backend">
+                            <i data-lucide="git-branch" class="skill-icon backend-icon"></i>
+                            <h3>Git / Version Control</h3>
+                            <p class="lang-es">Gestión de ramas, flujos de trabajo colaborativos en equipo, resolución de conflictos y CI/CD básico.</p>
+                            <p class="lang-en">Branch management, collaborative team workflows, merge conflict resolution, and basic CI/CD.</p>
+                        </div>
+
+                        <!-- Cybersecurity & AI -->
+                        <div class="skill-card card glass" data-category="cyber">
+                            <i data-lucide="shield-check" class="skill-icon cyber-icon"></i>
+                            <h3>Wireshark & Nmap</h3>
+                            <p class="lang-es">Análisis avanzado de paquetes TCP/IP, descubrimiento de puertos, mapeo de red e identificación de servicios.</p>
+                            <p class="lang-en">TCP/IP packet analysis, port scanning, network topology mapping, and active service detection.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="cyber">
+                            <i data-lucide="bug" class="skill-icon cyber-icon"></i>
+                            <h3>Burp Suite</h3>
+                            <p class="lang-es">Auditoría básica de seguridad web, interceptación de peticiones HTTP, detección de OWASP Top 10 e inyecciones.</p>
+                            <p class="lang-en">Web application vulnerability assessment, HTTP request interception, and OWASP Top 10 detection.</p>
+                        </div>
+                        <div class="skill-card card glass" data-category="cyber">
+                            <i data-lucide="sparkles" class="skill-icon cyber-icon"></i>
+                            <h3>Generative AI & API</h3>
+                            <p class="lang-es">Integración de OpenAI API, automatizaciones de procesos usando LLMs y prompts de ingeniería avanzados.</p>
+                            <p class="lang-en">OpenAI API integration, workflow automation utilizing LLMs, and advanced prompt engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="lang-es">Trayectoria Profesional</span><span class="lang-en">Work Experience</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Bisnesmart -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i data-lucide="briefcase"></i></div>
+                        <div class="timeline-content card glass">
+                            <div class="card-glow"></div>
+                            <span class="timeline-date">05/2021 – 11/2021</span>
+                            <h3 class="timeline-role"><span class="lang-es">Desarrollador Odoo ERP</span><span class="lang-en">Odoo ERP Developer</span></h3>
+                            <h4 class="timeline-company">Bisnesmart <span class="company-badge"><span class="lang-es">Consultoría IT</span><span class="lang-en">IT Consulting</span></span></h4>
+                            <ul class="timeline-details">
+                                <li class="lang-es">Desarrollo y personalización de módulos ERP (ventas, inventario, facturación) en Python y Odoo Framework.</li>
+                                <li class="lang-es">Optimización de módulos Python reduciendo hasta un <strong>20% el tiempo de carga</strong> de procesos de negocio críticos.</li>
+                                <li class="lang-es">Creación de scripts en Python para la migración e integración segura de bases de datos PostgreSQL/MySQL.</li>
+                                <li class="lang-es">Soporte técnico avanzado del ERP, diagnóstico y resolución ágil de incidencias técnicas en sistemas de producción.</li>
+                                
+                                <li class="lang-en">Developed and customized key ERP modules (sales, inventory, invoicing) using Python and the Odoo framework.</li>
+                                <li class="lang-en">Optimized business logic Python scripts, successfully reducing process loading times by <strong>20%</strong>.</li>
+                                <li class="lang-en">Authored robust Python scripts for high-fidelity database migrations between PostgreSQL and MySQL.</li>
+                                <li class="lang-en">Provided expert technical troubleshooting and customer support for mission-critical production ERP systems.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Independent Developer -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"><i data-lucide="code"></i></div>
+                        <div class="timeline-content card glass">
+                            <div class="card-glow"></div>
+                            <span class="timeline-date">2022 – 2023</span>
+                            <h3 class="timeline-role"><span class="lang-es">Desarrollador Software Independiente</span><span class="lang-en">Independent Software Developer</span></h3>
+                            <h4 class="timeline-company"><span class="lang-es">Proyectos & Consultoría Freelance</span><span class="lang-en">Freelance Projects & Dev</span></h4>
+                            <ul class="timeline-details">
+                                <li class="lang-es">Arquitectura y desarrollo de interfaces modernas e interactivas utilizando Angular y TypeScript.</li>
+                                <li class="lang-es">Creación de aplicaciones móviles híbridas optimizadas mediante Ionic para ecosistemas iOS, Android y Web.</li>
+                                <li class="lang-es">Integración de servicios backend y pasarelas de datos consumiendo APIs REST seguras con Python.</li>
+                                <li class="lang-es">Publicación de proyectos de código abierto en GitHub orientados a la productividad y automatización personal.</li>
+                                
+                                <li class="lang-en">Architected and engineered state-of-the-art responsive single page applications (SPA) using Angular and TypeScript.</li>
+                                <li class="lang-en">Built cross-platform hybrid mobile applications utilizing the Ionic framework for iOS, Android, and web distribution.</li>
+                                <li class="lang-en">Consumed and integrated robust REST APIs with advanced backend service automations in Python.</li>
+                                <li class="lang-en">Designed, maintained, and published open-source developer productivity tools and scripts on GitHub.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Croke Park Hotel -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"><i data-lucide="globe-2"></i></div>
+                        <div class="timeline-content card glass">
+                            <div class="card-glow"></div>
+                            <span class="timeline-date">2024 – 2025</span>
+                            <h3 class="timeline-role"><span class="lang-es">Inmersión Profesional en el Extranjero</span><span class="lang-en">Professional Language Immersion</span></h3>
+                            <h4 class="timeline-company">Croke Park Hotel <span class="company-badge">Dublin, Ireland</span></h4>
+                            <ul class="timeline-details">
+                                <li class="lang-es">Estancia de inmersión cultural y lingüística con el objetivo de perfeccionar el inglés comercial y profesional (Nivel B2).</li>
+                                <li class="lang-es">Soporte operativo y coordinación de servicios hoteleros de alta demanda bajo altos estándares internacionales.</li>
+                                <li class="lang-es">Desarrollo de soft skills críticas: comunicación efectiva y adaptabilidad en un equipo de trabajo multicultural.</li>
+                                
+                                <li class="lang-en">Participated in a multi-year immersive language program to master professional B2 business English.</li>
+                                <li class="lang-en">Coordinated high-pressure operational support inside a highly demanding five-star hospitality establishment.</li>
+                                <li class="lang-en">Sharpened essential soft skills: team leadership, intercultural communication, and rapid adaptivity.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Otras certificaciones / Formación complementaria -->
+                <div class="education-extra-grid">
+                    <div class="edu-extra-card card glass">
+                        <div class="card-glow"></div>
+                        <div class="edu-extra-icon"><i data-lucide="sparkles"></i></div>
+                        <div class="edu-extra-content">
+                            <h3><span class="lang-es">IA Generativa</span><span class="lang-en">Generative AI</span></h3>
+                            <p class="edu-extra-institution">EOI Valencia (2025)</p>
+                            <p class="lang-es">Formación avanzada en el uso práctico de modelos masivos de lenguaje (LLM), ingeniería de prompts y automatización de procesos empresariales.</p>
+                            <p class="lang-en">Advanced training in large language models, prompt engineering, and operational automation utilizing AI APIs.</p>
+                        </div>
+                    </div>
+                    <div class="edu-extra-card card glass">
+                        <div class="card-glow"></div>
+                        <div class="edu-extra-icon"><i data-lucide="languages"></i></div>
+                        <div class="edu-extra-content">
+                            <h3><span class="lang-es">Inglés Profesional</span><span class="lang-en">Professional English</span></h3>
+                            <p class="edu-extra-institution">EnglishPath Ireland (2024)</p>
+                            <p class="lang-es">Programa formativo intensivo de inglés en Dublín, Irlanda, enfocado en negociación comercial y comunicación técnica en IT.</p>
+                            <p class="lang-en">Intensive English language training in Dublin, Ireland, focused on technical IT communication and commercial business speech.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cybersecurity & Interactive Terminal Section -->
+        <section id="cybersecurity" class="section-padding section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="lang-es">Ciberseguridad & Sandbox CLI</span><span class="lang-en">Cybersecurity & CLI Sandbox</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="cyber-intro">
+                    <p class="lang-es">Como especialista titulado en ciberseguridad, considero fundamental el desarrollo de software seguro por diseño. Domino herramientas de análisis y auditoría. Para demostrarlo, puedes interactuar con mi terminal virtual a continuación:</p>
+                    <p class="lang-en">As a certified cybersecurity specialist, I build secure-by-design software. I am skilled in active network mapping, auditing, and packet analysis. Interact with my virtual sandbox CLI to explore my profile:</p>
+                </div>
+
+                <!-- CLI Terminal UI -->
+                <div class="terminal-window glass">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">
+                            <i data-lucide="terminal" class="term-icon"></i> guest@ramonmoncholi.sh: ~
+                        </div>
+                        <div class="terminal-actions">
+                            <span class="term-badge">SECURE_SHELL v1.4</span>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-body" id="terminal-screen">
+                        <!-- Welcome message -->
+                        <div class="term-line welcome-msg">
+                            <p class="lang-es">============================================================</p>
+                            <p class="lang-en">============================================================</p>
+                            <p class="lang-es">¡BIENVENIDO A LA TERMINAL INTERACTIVA DE RAMÓN MONCHOLÍ!</p>
+                            <p class="lang-en">WELCOME TO RAMON MONCHOLI'S INTERACTIVE SHELL!</p>
+                            <p class="lang-es">Escribe <span class="highlight">help</span> para ver los comandos disponibles e interactuar.</p>
+                            <p class="lang-en">Type <span class="highlight">help</span> to view available commands and interact.</p>
+                            <p class="lang-es">============================================================</p>
+                            <p class="lang-en">============================================================</p>
+                            <br>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-input-line">
+                        <span class="prompt-symbol">guest@ramonmoncholi.sh:~$</span>
+                        <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false" placeholder="type 'help'...">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="lang-es">Proyectos Destacados</span><span class="lang-en">Featured Projects</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Blog_Teknologia -->
+                    <article class="project-card card glass">
+                        <div class="card-glow"></div>
+                        <div class="project-img-container">
+                            <div class="project-icon-wrapper p-violet">
+                                <i data-lucide="book-open"></i>
+                            </div>
+                            <span class="project-category">Ionic Angular & TypeScript</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Blog_Teknologia</h3>
+                            <p class="lang-es">Blog interactivo sobre tecnología y desarrollo web desarrollado con Ionic y Angular. Cuenta con una navegación fluida, estructura modular de artículos y diseño responsivo móvil-primero.</p>
+                            <p class="lang-en">An interactive technology and web development blog built using Ionic and Angular. Features fluid SPA routing, modular article structures, and mobile-first responsive design.</p>
+                            <div class="project-tags">
+                                <span class="tag">Angular</span>
+                                <span class="tag">Ionic</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Mobile SPA</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/doliax/Blog_Teknologia" target="_blank" rel="noopener noreferrer" class="project-link" id="project1-github">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <span class="project-simulated-btn"><i data-lucide="shield-check"></i> <span class="lang-es">Verificado</span><span class="lang-en">Verified</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: web_sushi -->
+                    <article class="project-card card glass">
+                        <div class="card-glow"></div>
+                        <div class="project-img-container">
+                            <div class="project-icon-wrapper p-blue">
+                                <i data-lucide="utensils"></i>
+                            </div>
+                            <span class="project-category">Angular & TypeScript</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">web_sushi</h3>
+                            <p class="lang-es">Aplicación web temática de Sushi construida en Angular. Presenta una interfaz de restaurante atractiva, menú digital dinámico, simulador de carrito de compras y excelentes transiciones UX.</p>
+                            <p class="lang-en">A custom themed Sushi restaurant application engineered in Angular. Showcases a highly visual user interface, dynamic digital menu, shopping cart simulation, and premium UX transitions.</p>
+                            <div class="project-tags">
+                                <span class="tag">Angular</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3 (Modern)</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/doliax/web_sushi" target="_blank" rel="noopener noreferrer" class="project-link" id="project2-github">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <span class="project-simulated-btn"><i data-lucide="shield-check"></i> <span class="lang-es">Verificado</span><span class="lang-en">Verified</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: lop_web -->
+                    <article class="project-card card glass">
+                        <div class="card-glow"></div>
+                        <div class="project-img-container">
+                            <div class="project-icon-wrapper p-green">
+                                <i data-lucide="layout"></i>
+                            </div>
+                            <span class="project-category">React & Tailwind CSS</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">lop_web</h3>
+                            <p class="lang-es">Sitio web moderno y responsivo desarrollado con React y estilizado con Tailwind CSS. Destaca por su alta velocidad de renderizado, estructura limpia de componentes y micro-animaciones fluidas.</p>
+                            <p class="lang-en">A sleek and modern responsive presentation website built utilizing React and Tailwind CSS. Focuses on high-performance rendering, modular components architecture, and fluid interface animations.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Tailwind CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Modern UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/doliax/lop_web" target="_blank" rel="noopener noreferrer" class="project-link" id="project3-github">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <span class="project-simulated-btn"><i data-lucide="shield-check"></i> <span class="lang-es">Verificado</span><span class="lang-en">Verified</span></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: ejercicios_ts -->
+                    <article class="project-card card glass">
+                        <div class="card-glow"></div>
+                        <div class="project-img-container">
+                            <div class="project-icon-wrapper p-cyan">
+                                <i data-lucide="braces"></i>
+                            </div>
+                            <span class="project-category">TypeScript & Algorithms</span>
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">ejercicios_ts</h3>
+                            <p class="lang-es">Repositorio de código enfocado en la resolución de problemas avanzados mediante TypeScript. Demuestra el dominio de tipado fuerte, interfaces complejas, asincronía y algoritmos eficientes.</p>
+                            <p class="lang-en">A technical code repository showcasing advanced solved problems using TypeScript. Highlights strong typing mastery, complex interfaces, async workflows, and efficient algorithms.</p>
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">Algorithms</span>
+                                <span class="tag">Clean Code</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/doliax/ejercicios_ts" target="_blank" rel="noopener noreferrer" class="project-link" id="project4-github">
+                                    <i data-lucide="github"></i> Code
+                                </a>
+                                <span class="project-simulated-btn"><i data-lucide="shield-check"></i> <span class="lang-es">Verificado</span><span class="lang-en">Verified</span></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        <span class="lang-es">Contacto</span><span class="lang-en">Contact Me</span>
+                    </h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards / Socials -->
+                    <div class="contact-sidebar">
+                        <div class="card glass info-card-wrapper">
+                            <div class="card-glow"></div>
+                            <h3 class="card-title">
+                                <span class="lang-es">¡Hablemos!</span><span class="lang-en">Let's Connect!</span>
+                            </h3>
+                            <p class="contact-intro lang-es">¿Buscas un desarrollador versátil, proactivo y enfocado en código seguro para tu equipo? No dudes en contactarme.</p>
+                            <p class="contact-intro lang-en">Are you looking for a versatile, proactive developer focused on writing secure-by-design code? Let's talk!</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-method-card">
+                                    <div class="method-icon"><i data-lucide="mail"></i></div>
+                                    <div class="method-text">
+                                        <h4>Email</h4>
+                                        <a href="mailto:ramon.moncholi08@gmail.com">ramon.moncholi08@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-method-card">
+                                    <div class="method-icon"><i data-lucide="phone"></i></div>
+                                    <div class="method-text">
+                                        <h4><span class="lang-es">Teléfono</span><span class="lang-en">Phone</span></h4>
+                                        <a href="tel:+34634692908">+34 634 692 908</a>
+                                    </div>
+                                </div>
+
+                                <div class="contact-method-card">
+                                    <div class="method-icon"><i data-lucide="map-pin"></i></div>
+                                    <div class="method-text">
+                                        <h4><span class="lang-es">Ubicación</span><span class="lang-en">Location</span></h4>
+                                        <span>Denia, Alicante, <span class="lang-es">España</span><span class="lang-en">Spain</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-box">
+                                <h4 class="lang-es">Sígueme en redes</h4>
+                                <h4 class="lang-en">Follow me online</h4>
+                                <div class="social-icons">
+                                    <a href="https://linkedin.com/in/ramonmonros" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-link-btn" id="contact-linkedin"><i data-lucide="linkedin"></i></a>
+                                    <a href="https://github.com/doliax" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-link-btn" id="contact-github"><i data-lucide="github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-form-container card glass">
+                        <div class="card-glow"></div>
+                        <h3 class="card-title">
+                            <span class="lang-es">Enviar Mensaje</span><span class="lang-en">Send a Message</span>
+                        </h3>
+                        <form id="contact-form" autocomplete="on">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name"><span class="lang-es">Nombre</span><span class="lang-en">Name</span></label>
+                                    <input type="text" id="form-name" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-email">Email</label>
+                                    <input type="email" id="form-email" required placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-subject"><span class="lang-es">Asunto</span><span class="lang-en">Subject</span></label>
+                                <input type="text" id="form-subject" required placeholder="Oportunidad laboral / Consulta">
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message"><span class="lang-es">Mensaje</span><span class="lang-en">Message</span></label>
+                                <textarea id="form-message" required rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <span class="lang-es">Enviar Mensaje</span><span class="lang-en">Send Message</span>
+                                <i data-lucide="send"></i>
+                            </button>
+                            <div id="form-status" style="display: none;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span>&lt;</span>RMR<span class="logo-accent"> /&gt;</span>
+            </div>
+            <p class="footer-copy lang-es">&copy; 2026 Ramón Moncholí Ros. Todos los derechos reservados. Desarrollado con HTML, CSS y JS.</p>
+            <p class="footer-copy lang-en">&copy; 2026 Ramon Moncholi Ros. All rights reserved. Crafted with HTML, CSS & JS.</p>
+            <p class="footer-tech">
+                <span class="tech-item">HTML5</span>
+                <span class="tech-item">CSS3 (Modern)</span>
+                <span class="tech-item">Vanilla JS</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
